@@ -10,7 +10,7 @@ body{
 
 a{
     display: inline-block;
-
+    text-decoration: none;
 }
 
 p{
@@ -43,11 +43,63 @@ header .container nav a{
     margin: 0 15px;
 }
 
+header .container .hamb{
+    display: none;
+}
+
 header .container nav a:hover{
     color: black;
     text-decoration: underline;
     margin: 0 15px;
     transition: 1s;
+}
+
+footer.seccion{
+    background-color: black;
+    color: white;
+    padding-bottom: 0;
+}
+
+footer .barra-footer{
+    background-color: grey;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+footer ul li{
+    margin-bottom: 15px;
+}
+
+footer .logo-footer{
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    margin-bottom: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .redes{
+    font-size: 30px;
+    display: flex;
+}
+
+footer .redes a{
+    margin: 0 7.5px;
 }
 
 .boton{
@@ -152,6 +204,10 @@ header .container nav a:hover{
 .columna{
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.columna-25{
+    width: 25%;
 }
 
 .columna-33{
@@ -315,4 +371,52 @@ header .container nav a:hover{
 
 #contactenos form .form-block.bloque-ultimo{
     margin-bottom: 0;    
+}
+
+@media(max-width: 767px){
+    body{
+        font-size: 15px;
+    }
+
+    header .container nav{
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        height: 100%;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 15px;
+        padding-right: 15px;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease;
+        transform: translateX(100%);
+    }
+
+    header .container nav a{
+        font-size: 30px;
+        margin: 15px 0;        
+    }
+
+    header .container .hamb{
+        display: block;
+        font-size: 40px;
+        color: red;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    #inicio {
+        height: 100vh;
+    }
+
+    #inicio img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
